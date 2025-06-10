@@ -1,0 +1,40 @@
+.dashboard-container {
+  min-height: 100vh;
+  background: #f4f4f4;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+}
+.dashboard-logo {
+  height: 50px;
+}
+.melding-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+}
+.melding-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: .5rem;
+}
+.details-btn {
+  background: #0070f3;
+  color: #fff;
+  border: none;
+  padding: .5rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
