@@ -25,7 +25,7 @@ import {
 import LocalPoliceIcon from '@mui/icons-material/LocalPolice';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 
-const API_URL = "https://meldkamer-back-end.onrender.com/meldingen";
+const API_URL = "const API_URL = `${process.env.NEXT_PUBLIC_BACKEND_URL}/meldingen`;";
 const MELDING_INTERVAL = 15000; // 15 seconden per melding 
 const politieBlauw = "#003082";
 
