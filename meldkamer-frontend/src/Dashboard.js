@@ -88,7 +88,7 @@ const Dashboard = () => {
 
   // Ophalen alle meldingen 1x
   useEffect(() => {
-    console.log("https://meldkamer-back-end.onrender.com/meldingen:", API_URL); axios.get(API_URL).then((response) => {
+    console.log("https://meldkamer-back-end.onrender.com:", API_URL); axios.get(API_URL).then((response) => {
       setAlleMeldingen(response.data);
       setZichtbareMeldingen([]);
       setNoodgevallen([]);
