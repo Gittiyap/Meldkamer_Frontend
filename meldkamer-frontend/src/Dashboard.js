@@ -94,7 +94,9 @@ const Dashboard = () => {
       setZichtbareMeldingen([]);
       setNoodgevallen([]);
       setGeenNoodgevallen([]);
-      meldingIndex.current = 0;});
+      meldingIndex.current = 0;
+    });
+
   // Simuleer meldingen binnenkomst
   useEffect(() => {
     if (alleMeldingen.length === 0) return;
