@@ -25,7 +25,7 @@ import {
 import LocalPoliceIcon from '@mui/icons-material/LocalPolice';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 
-const API_URL = `${process.env.NEXT_PUBLIC_BACKEND_URL || "https://meldkamer-back-end.onrender.com"}/meldingen`;
+const API_URL = `${process.env.NEXT_PUBLIC_BACKEND_URL}/meldingen`;
 const MELDING_INTERVAL = 15000; // 15 seconden per melding 
 const politieBlauw = "#003082";
 
@@ -89,13 +89,14 @@ const Dashboard = () => {
   // Ophalen alle meldingen 1x
   useEffect(() => {
     console.log("API_URL:", API_URL);
- axios.get(API_URL).then((response) => {console.log("Binnengekomen meldingen:", response.data);
-      setAlleMeldingen(response.data);});
+ axios.get(API_URL).then((response) => {
+  setAlleMeldingen(response.data);});
       setZichtbareMeldingen([]);
       setNoodgevallen([]);
       setGeenNoodgevallen([]);
       meldingIndex.current = 0;
-    });
+    });, []
+  const { meldingen } = props;
 
   // Simuleer meldingen binnenkomst
   useEffect(() => {
@@ -103,7 +104,7 @@ const Dashboard = () => {
     const interval = setInterval(() => {
       if (meldingIndex.current < alleMeldingen.length) {
         const nieuwe = alleMeldingen[meldingIndex.current];
-        setZichtbareMeldingen(prev => [nieuwe, ...prev].slice(0, 30)); // Max 30 in lijst
+        setZichtbareMeldingen(prev => [nieuwe, ...prev].slice(0, 50)); // Max 30 in lijst
         setPopMelding(nieuwe);
         meldingIndex.current++;
       } else {
