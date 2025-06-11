@@ -89,8 +89,8 @@ const Dashboard = () => {
   // Ophalen alle meldingen 1x
   useEffect(() => {
     console.log("API_URL:", API_URL);
- axios.get(API_URL).then((response) => {
-  setAlleMeldingen(response.data);});
+ axios.get(API_URL).then((response) => {console.log("Binnengekomen meldingen:", response.data);
+      setAlleMeldingen(response.data);});
       setZichtbareMeldingen([]);
       setNoodgevallen([]);
       setGeenNoodgevallen([]);
