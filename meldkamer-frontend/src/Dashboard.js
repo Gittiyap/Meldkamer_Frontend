@@ -96,7 +96,7 @@ const Dashboard = () => {
       setGeenNoodgevallen([]);
       meldingIndex.current = 0;
     });
-  }, []);
+  const { meldingen } = props;
 
   // Simuleer meldingen binnenkomst
   useEffect(() => {
