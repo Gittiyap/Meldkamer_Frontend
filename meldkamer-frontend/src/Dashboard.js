@@ -8,7 +8,7 @@ import {
 import LocalPoliceIcon from '@mui/icons-material/LocalPolice';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 
-const API_URL = \`\${process.env.NEXT_PUBLIC_BACKEND_URL || "https://meldkamer-back-end.onrender.com"}/meldingen\`;
+const API_URL = `${process.env.NEXT_PUBLIC_BACKEND_URL || "https://meldkamer-back-end.onrender.com"}/meldingen`;
 const MELDING_INTERVAL = 15000;
 const politieBlauw = "#003082";
 
